@@ -1,6 +1,6 @@
 # Teri-anric OR StrawBerry <img src="_static/img/emoji/cat_love_strawberry.png" style="height: 1em;">
 
-Backend developer specializing in building applications using frameworks like Django/FastAPI. Experienced in creating integrations, APIs, and Telegram bots.
+## Backend developer with 2 years of experience specializing in building applications using frameworks like Django/FastAPI. Experienced in creating integrations, APIs, and Telegram bots.
 
 
 ### If you are interested in my studies, there is a separate account for
