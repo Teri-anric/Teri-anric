@@ -44,6 +44,27 @@ body {
     background-color: var(--border-color);
 }
 
+.billing-button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: var(--hover-color);
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.billing-button:hover {
+    transform: scale(1.05);
+    background-color: var(--border-color);
+}
+
+.billing-button img {
+    width: 30px;
+    height: 30px;
+}
 
 /* Контейнер профілю */
 .profile-container {
@@ -97,7 +118,6 @@ body {
     color: var(--text-secondary);
     margin: 1rem 0;
 }
-
 
 /* Маленькі іконки */
 .small-icon {
@@ -211,13 +231,216 @@ body {
 
 
 /* Медіа запити для адаптивності */
+@media (max-width: 1200px) {
+    body {
+        padding: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
+    body {
+        padding: 0.5rem;
+    }
+
     .profile-container {
         flex-direction: column;
         text-align: center;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .profile-avatar {
+        width: 150px;
+        height: 150px;
     }
 
     .stack-items, .profile-links, .social-links {
         justify-content: center;
     }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .payment-method {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .payment-details {
+        width: 100%;
+    }
+
+    .modal-content {
+        margin: 2% auto;
+        padding: 1rem;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Модальне вікно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background: var(--card-bg);
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 500px;
+    max-height: 80vh;
+    position: relative;
+    box-shadow: 0 4px 16px var(--shadow-color);
+    overflow-y: auto;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: var(--card-bg);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-color);
+}
+
+.close {
+    position: sticky;
+    top: 0;
+    right: 1rem;
+    float: right;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    z-index: 1;
+    background: var(--card-bg);
+    padding: 0 0.5rem;
+}
+
+.close:hover {
+    color: var(--text-primary);
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.payment-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: var(--hover-color);
+    border-radius: 0.8rem;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.payment-method:hover {
+    background: var(--border-color);
+}
+
+.payment-method:hover > img {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.payment-method > img {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background: var(--card-bg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.payment-details {
+    flex: 1;
+}
+
+.payment-method p {
+    margin: 0.3rem 0;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+/* Стилі для номерів карток */
+.card-number {
+    font-family: monospace;
+    position: relative;
+    padding-right: 2rem;
+    cursor: pointer;
+}
+
+/* Підказка при копіюванні */
+.copy-tooltip {
+    position: absolute; /* Change to absolute for centering relative to the parent */
+    background: var(--card-bg);
+    color: var(--text-primary);
+    padding: 1.05em;
+    border-radius: 1rem;
+    font-size: 1em;
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%); /* Adjust position to truly center */
+    opacity: 1;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+/* Мітки для типів платежів */
+.payment-label {
+    font-size: 1.1rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    margin-left: 0.5rem;
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+/* Стилі для крипто-адрес */
+.crypto-address {
+    font-size: 0.9rem;
+    word-break: break-all;
+    background: var(--card-bg);
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin: 0.2rem 0;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 29vh;
 }
