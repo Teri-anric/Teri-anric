@@ -1,0 +1,29 @@
+:root {
+    /* Light Theme Colors */
+    --bg-color-light: #f0f0f0;
+    --text-color-light: #333;
+    --link-color-light: #007bff;
+    --shadow-color-light: #000000;
+
+    /* Dark Theme Colors */
+    --bg-color-dark: #1a1a1a;
+    --card-bg-dark: #242424;
+    --text-primary-dark: #ffffff;
+    --text-secondary-dark: #a0a0a0;
+    --border-color-dark: #333333;
+    --shadow-color-dark: rgba(0, 0, 0, 0.3);
+    --hover-color-dark: #2a2a2a;
+    --strawberry: #ff6666;
+}
+
+/* Default to light theme */
+body {
+    color-scheme: light;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        color-scheme: dark;
+    }
+}

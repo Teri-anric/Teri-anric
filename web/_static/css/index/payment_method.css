@@ -1,0 +1,127 @@
+@import "./varibles.css";
+
+@media (max-width: 768px) {  
+    .payment-method {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .payment-details {
+        width: 100%;
+    }
+
+    .modal-content {
+        margin: 2% auto;
+        padding: 1rem;
+        width: 90%;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background: var(--card-bg);
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 500px;
+    max-height: 80vh;
+    position: relative;
+    box-shadow: 0 4px 16px var(--shadow-color);
+    overflow-y: auto;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: var(--card-bg);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-color);
+}
+
+.close {
+    position: sticky;
+    top: 0;
+    right: 1rem;
+    float: right;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    z-index: 1;
+    background: var(--card-bg);
+    padding: 0 0.5rem;
+}
+
+.close:hover {
+    color: var(--text-primary);
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.payment-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: var(--hover-color);
+    border-radius: 0.8rem;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.payment-method:hover {
+    background: var(--border-color);
+}
+
+.payment-method:hover > img {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.payment-method > img {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background: var(--card-bg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.payment-details {
+    flex: 1;
+}
+
+.payment-method p {
+    margin: 0.3rem 0;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
