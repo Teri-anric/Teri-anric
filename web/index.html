@@ -6,6 +6,7 @@
     <title>Teri-anric|StrawBerry</title>
     <link rel="icon" href="_static/img/emoji/cat_love_strawberry.png">
     <link rel="stylesheet" href="_static/css/index.css">
+    <link rel="stylesheet" href="_static/css/index/payment_method.css">
     
     <!-- Basic Meta Tags -->
     <meta name="description" content="Backend developer with 2 years of experience specializing in Django/FastAPI, APIs, and Telegram bots">
@@ -31,233 +32,28 @@
     <meta name="twitter:description" content="Backend developer with 2 years of experience specializing in Django/FastAPI, APIs, and Telegram bots">
     <meta name="twitter:image" content="https://teri-anric.onrender.com/_static/img/avatar.png">
 
-    <!-- Scripts -->
-    <script src="_static/js/index.js"></script>
+    <!-- React (CDN) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
 </head>
 
 <body>
-    <div class="profile-container">
-        <img class="profile-avatar" src="_static/img/avatar.png" alt="Teri-anric">
-        <div class="profile-info">
-            <h1>
-                Teri-anric
-                <span class="nickname">StrawBerry</span>
-                <img class="emoji" src="_static/img/emoji/cat_love_strawberry.png">
-            </h1>
-            <p class="bio">
-                Backend developer with 2 years of experience specializing in building applications using frameworks like
-                Django/FastAPI. Experienced in creating integrations, APIs, and Telegram bots.
-            </p>
-            <div class="profile-links">
-                <a href="https://github.com/Teri-anric" class="github-link">
-                    <img src="https://github.com/teri-anric.png" class="small-icon">
-                    Teri-anric
-                </a>
-                <a href="https://github.com/teri-schools/" class="github-link">
-                    <img src="https://github.com/teri-schools.png" class="small-icon">
-                    Teri-schools
-                </a>
-                <a href="resume.html" class="resume-link">
-                    <img src="_static/img/icon/document.svg">
-                    Resume
-                </a>
-                <button id="billing-button" class="billing-button">
-                    <img src="_static/img/icon/billing.svg">
-                </button>                   
-            </div>
-        </div>
-    </div>
+    <div id="root"></div>
 
-    <div class="container">
-        <h2><img src="_static/img/icon/stack.svg" class="section-icon">Technical Stack</h2>
-
-        <div class="stack-group">
-            <h3><img src="_static/img/icon/os.svg" class="section-icon">Operating Systems</h3>
-            <div class="stack-items">
-                <img class="stack-logo" src="_static/img/logo/linux.svg" title="Linux">
-                <img class="stack-logo" src="_static/img/logo/windows11.svg" title="Windows">
-                <img class="stack-logo" src="_static/img/logo/android.svg" title="Android">
-            </div>
-        </div>
-
-        <div class="stack-group">
-            <h3><img src="_static/img/icon/code.svg" class="section-icon">Programming Languages</h3>
-            <div class="stack-items">
-                <img class="stack-logo" src="_static/img/logo/python.svg" title="Python">
-                <img class="stack-logo" src="_static/img/logo/javascript.svg" title="JavaScript">
-                <img class="stack-logo" src="_static/img/logo/kotlin.svg" title="Kotlin">
-                <img class="stack-logo" src="_static/img/logo/csharp.svg" title="C#">
-            </div>
-        </div>
-
-        <div class="stack-group">
-            <h3><img src="_static/img/icon/framework.svg" class="section-icon">Frameworks & Libraries</h3>
-            <div class="stack-items">
-                <img class="stack-logo" src="_static/img/logo/aiogram.png" title="Aiogram/tg bots">
-                <img class="stack-logo" src="_static/img/logo/django.png" title="Django">
-                <img class="stack-logo" src="_static/img/logo/sqlalchemy.png" title="SQLAlchemy">
-                <img class="stack-logo" src="_static/img/logo/flask.png" title="Flask">
-                <img class="stack-logo" src="_static/img/logo/fastapi.png" title="FastApi">
-                <img class="stack-logo" src="_static/img/logo/qt.svg" title="Qt">
-            </div>
-        </div>
-
-        <div class="stack-group">
-            <h3><img src="_static/img/icon/database.svg" class="section-icon">Databases</h3>
-            <div class="stack-items">
-                <img class="stack-logo" src="_static/img/logo/postgresql.svg" title="PostgreSQL">
-                <img class="stack-logo" src="_static/img/logo/redis.svg" title="Redis">
-                <img class="stack-logo" src="_static/img/logo/sqlite.svg" title="SQLite">
-                <img class="stack-logo" src="_static/img/logo/elasticsearch.svg" title="ElasticSearch">
-            </div>
-        </div>
-
-        <div class="stack-group">
-            <h3><img src="_static/img/icon/tools.svg" class="section-icon">Tools</h3>
-            <div class="stack-items">
-                <img class="stack-logo" src="_static/img/logo/docker.svg" title="Docker">
-                <img class="stack-logo" src="_static/img/logo/nginx.svg" title="Nginx">
-            </div>
-        </div>
-
-        <div class="stack-group">
-            <h3><img src="_static/img/icon/vcs.svg" class="section-icon">VCS</h3>
-            <div class="stack-items">
-                <img class="stack-logo" src="_static/img/logo/git.svg" title="Git">
-                <img class="stack-logo" src="_static/img/logo/gitlab.svg" title="GitLab">
-                <img class="stack-logo" src="_static/img/logo/github.svg" title="GitHub">
-            </div>
-        </div>
-
-        <div class="stack-group">
-            <h3><img src="_static/img/icon/ide.svg" class="section-icon">IDE</h3>
-            <div class="stack-items">
-                <img class="stack-logo" src="_static/img/logo/vscode.svg" title="VSCode">
-                <img class="stack-logo" src="_static/img/logo/pycharm.svg" title="PyCharm">
-                <img class="stack-logo" src="_static/img/logo/cursor.svg" title="Cursor">
-            </div>
-        </div>
-
-        <div class="stack-group">
-            <h3><img src="_static/img/icon/frontend.svg" class="section-icon">Frontend</h3>
-            <div class="stack-items">
-                <img class="stack-logo" src="_static/img/logo/react.svg" title="React">
-                <img class="stack-logo" src="_static/img/logo/html5.svg" title="HTML5">
-                <img class="stack-logo" src="_static/img/logo/css3.svg" title="CSS3">
-                <img class="stack-logo" src="_static/img/logo/jinja.png" title="Jinja">
-                <img class="stack-logo" src="_static/img/logo/jquery.svg" title="jQuery">
-            </div>
-        </div>
-
-        <div class="stack-group">
-            <h3><img src="_static/img/icon/ai.svg" class="section-icon">AI</h3>
-            <div class="stack-items">
-                <img class="stack-logo" src="_static/img/logo/anthropic.ico" title="Claude">
-                <img class="stack-logo" src="_static/img/logo/openai.png" title="OpenAI">
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <h2><img src="_static/img/icon/social.svg" class="section-icon">Connect me</h2>
-        <div class="social-links">
-            <a href="https://t.me/teri_anric" class="social-link">
-                <img class="logo" src="_static/img/logo/telegram.svg">
-            </a>
-            <a href="https://www.instagram.com/teri_anric/" class="social-link">
-                <img class="logo" src="_static/img/logo/instagram.png">
-            </a>
-            <a href="https://www.linkedin.com/in/teri-anric/" class="social-link">
-                <img class="logo" src="_static/img/logo/linkedin.png">
-            </a>
-            <a href="https://discord.com/users/833985930896605235" class="social-link">
-                <img class="logo" src="_static/img/logo/discord.ico">
-            </a>
-        </div>
-    </div>
-
-    <div id="billingModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Payment Details</h2>
-            <div class="payment-methods">
-                <!-- PUMB -->
-                <div class="payment-method">
-                    <img src="_static/img/payment/pumb.ico" alt="PUMB">
-                    <div class="payment-details">
-                        <h4>PUMB Bank</h4>
-                        <p>                            
-                            <span class="payment-label">
-                                <img src="_static/img/payment/uah.png" class="emoji">
-                                UAH
-                            </span>
-                            <span class="card-number copyable">5355 2800 3192 9548</span>
-                        </p>
-                        <p>
-                            <span class="payment-label">
-                                <img src="_static/img/payment/eur.png" class="emoji">
-                                EUR
-                            </span>
-                            <span class="card-number copyable">5355 2800 2772 8946</span>
-                        </p>
-                        <p>
-                            <span class="payment-label">
-                                <img src="_static/img/payment/usd.png" class="emoji">
-                                USD
-                            </span>
-                            <span class="card-number copyable">5355 2800 3375 0271</span>
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Monobank -->
-                <div class="payment-method">
-                    <img src="_static/img/payment/mono.svg" alt="Monobank">
-                    <div class="payment-details">
-                        <h4>Monobank</h4>
-                        <p>
-                            <span class="payment-label">
-                                <img src="_static/img/payment/uah.png" class="emoji">
-                                UAH
-                            </span>
-                            <span class="card-number copyable">4441 1111 4852 1176 </span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Crypto -->
-                <div class="payment-method">
-                    <img src="_static/img/payment/crypto.svg" alt="Crypto">
-                    <div class="payment-details">
-                        <h4>Cryptocurrency</h4>
-                        <p>
-                            <span class="payment-label">
-                                <img src="_static/img/payment/ton.svg" class="emoji">
-                                TON
-                            </span>
-                            <span class="crypto-address copyable">UQCXRKz0852ztLfyLHZe3bgTdaPaKLIgqXFq2DdcDsVJBWgq</span>
-                        </p>
-                        <p>
-                            <span class="payment-label">
-                                <img src="_static/img/payment/strk.svg" class="emoji">
-                                STRK
-                            </span>
-                            <span class="crypto-address copyable">0x069DE8104EB7abeBb3f93c8245ef83545336feD4055FE45F55C2cDDB9931C5f1</span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Buy Me a Coffee -->
-                <a href="https://www.buymeacoffee.com/teri_anric" class="payment-method" target="_blank">
-                    <img src="_static/img/payment/buymeacoffee.ico" alt="Buy Me a Coffee">
-                    <div class="payment-details">
-                        <h4>Buy Me a Coffee</h4>
-                        <p>Support my work with a coffee</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
+    <!-- App (JSX modules via Babel) -->
+    <script type="text/babel" data-presets="react">
+        // Enable import/export in inline JSX scripts
+    </script>
+    <script type="text/babel" data-presets="react" src="react/Profile.jsx"></script>
+    <script type="text/babel" data-presets="react" src="react/Stack.jsx"></script>
+    <script type="text/babel" data-presets="react" src="react/Socials.jsx"></script>
+    <script type="text/babel" data-presets="react" src="react/Projects.jsx"></script>
+    <script type="text/babel" data-presets="react" src="react/PaymentModal.jsx"></script>
+    <script type="text/babel" data-presets="react" src="react/Toast.jsx"></script>
+    <script type="text/babel" data-presets="react" src="react/App.jsx"></script>
+    <script type="text/babel" data-presets="react" src="react/main.jsx"></script>
 </body>
 
 </html>

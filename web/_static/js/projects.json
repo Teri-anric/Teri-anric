@@ -1,0 +1,13 @@
+[
+  {
+    "name": "ASS - Admin Site Services",
+    "url": "https://ass.strawberrycat.dev/",
+    "icon": "_static/img/payment/crypto.svg"
+  },
+  {
+    "name": "Main Website",
+    "url": "https://strawberrycat.dev/",
+    "icon": "_static/img/website.png"
+  }
+]
+
