@@ -11,7 +11,7 @@
 
 ### Check out the convenient web version
 
-[<img style="height: 1em;" src="web/_static/img/website.png"> Website](https://teri-anric.onrender.com/)
+[<img style="height: 1em;" src="web/_static/img/website.png"> Website](https://dev.strawberrycat.dev/)
 
 ## <img src="web/_static/img/icon/stack.svg" style="height: 15px;"> Technical Stack
 
