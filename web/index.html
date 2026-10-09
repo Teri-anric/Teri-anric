@@ -41,19 +41,12 @@
 
 <body>
     <div id="root"></div>
+    <script type="text/babel">
+        import App from './react/App.jsx';
 
-    <!-- App (JSX modules via Babel) -->
-    <script type="text/babel" data-presets="react">
-        // Enable import/export in inline JSX scripts
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
     </script>
-    <script type="text/babel" data-presets="react" src="react/Profile.jsx"></script>
-    <script type="text/babel" data-presets="react" src="react/Stack.jsx"></script>
-    <script type="text/babel" data-presets="react" src="react/Socials.jsx"></script>
-    <script type="text/babel" data-presets="react" src="react/Projects.jsx"></script>
-    <script type="text/babel" data-presets="react" src="react/PaymentModal.jsx"></script>
-    <script type="text/babel" data-presets="react" src="react/Toast.jsx"></script>
-    <script type="text/babel" data-presets="react" src="react/App.jsx"></script>
-    <script type="text/babel" data-presets="react" src="react/main.jsx"></script>
 </body>
 
 </html>
